@@ -19,10 +19,10 @@ const NewsListFetch = () => {
           <div className=" w-[300px]">
             <div className="news-cont grid shadow-xl  p-4 grid-cols-2  gap-20  wrapper" key={item.id}>
               <div className="box d grid col-span-2 row-start-1 row-end-1">
-                <img className="overflow-hidden" src={item.image_url} />
+                <img className="overflow-hidden w-[300px]" src={item.image_url} />
               </div>
               <div className="box b text-left font-bold text-md grid col-start-1 col-end-3 row-start-2 row-end-2">{item.title}</div>
-              <div className="box b text-left font-light text-md grid col-start-1 col-end-3 row-start-3 row-end-3">{item.description}</div>
+              <div className="box b text-left font-light text-md grid col-start-1 col-end-3 row-start-3 row-end-3 overflow-hidden">{item.description}</div>
             </div>
           </div>
         ))}
