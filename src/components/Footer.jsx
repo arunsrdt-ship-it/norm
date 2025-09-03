@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="foot-items bottom-0 left-0 z-50  w-full text-md flex justify-around gap-50 border-t border-gray-300 shadow-xl p-5">
-        <div className="item1">
-          <span className="text-xl font-semibold"> About</span>
+    <div className="footer bg-gray-100">
+      <div className="foot-items flex flex-wrap justify-around gap-8 sm:gap-12 md:gap-20 lg:gap-32 px-6 py-10 border-t border-gray-300 shadow-xl text-md">
+        {/* About Section */}
+        <div className="item1 flex flex-col">
+          <span className="text-xl font-semibold">About</span>
           <ul className="mt-4 font-semibold text-gray-500">
             <li className="mb-4">
               <Link>Our Story</Link>
@@ -19,7 +20,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="item2">
+
+        {/* Quick Links Section */}
+        <div className="item2 flex flex-col">
           <span className="text-xl font-semibold">Quick Links</span>
           <ul className="mt-4 font-semibold text-gray-500">
             <li className="mb-4">
@@ -33,8 +36,10 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="item3">
-          <span className="text-xl font-semibold"> Social Links</span>
+
+        {/* Social Links Section */}
+        <div className="item3 flex flex-col">
+          <span className="text-xl font-semibold">Social Links</span>
           <ul className="mt-4 font-semibold text-gray-500">
             <li className="mb-4">
               <Link>Youtube</Link>
@@ -47,8 +52,10 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="item4">
-          <span className="text-xl font-semibold">Social Links</span>
+
+        {/* Contact Info Section */}
+        <div className="item4 flex flex-col">
+          <span className="text-xl font-semibold">Contact Info</span>
           <ul className="mt-4 font-semibold text-gray-500">
             <li className="mb-4">
               <Link>Call Us: +91 1112223333</Link>
