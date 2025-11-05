@@ -24,13 +24,13 @@ const Carts = () => {
   }, [dispatch]);
   return (
     <div className="mt-20">
-      <button onClick={() => setToggle(!toggle)} className="btn btn-primary mb-5">
+      <button  onClick={() => setToggle(!toggle)} className="btn cursor-pointer font-bold btn-primary mb-5 bg-blue-500 text-white px-7 py-3 rounded-2xl flex m-auto">
         Cart
       </button>
       {!toggle && (
-        <div>
-          <h1>Cart</h1>
-          <button onClick={handleClick}>Close</button>
+        <div className="m-auto">
+          <h1 className="font-bold text-5xl justify-center  flex">Cart</h1>
+          <button className="flex bg-black text-white font-semibold px-4 py-2 rounded-2xl m-auto mt-10 cursor-pointer" onClick={handleClick}>Close</button>
 
           <div className="flex flex-wrap">
             {data.length !== 0 &&
@@ -40,18 +40,18 @@ const Carts = () => {
                   <div className="box mt-2 font-bold text-2xl a col-span-1 col-start-1"></div>
                   <div className="box mt-2 font-bold text-2xl a col-span-1 col-start-1">{item.category}</div>
                   <div className="box mt-2 font-bold text-2xl a col-span-1 col-start-1">₹{item.price}</div>
-                  <div className="box w-50  a col-span-1 col-start-1">
-                    <img src={item.thumbnail} />
+                  <div className="box w-50 a  col-start-1">
+                    <img className="flex justify-center items-center" src={item.thumbnail} />
                   </div>
                   <div className="">
                     <button className="bg-[#dfe1e6] border-gray-1 cursor-pointer m-2  px-20 py-3" onClick={() => handleRemove(item)}>
                       Remove From Cart
                     </button>
                   </div>
-                </div>
+                </div>             
               ))}
           </div>
-          <div>{data.length === 0 ? <h3>No Items present in cart</h3> : <div>Present</div>}</div>
+          <div>{data.length === 0 ? <h3>No Items present in cart</h3> : null}</div>
         </div>
       )}
     </div>
